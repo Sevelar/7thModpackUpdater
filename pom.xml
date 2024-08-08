@@ -124,17 +124,26 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>com.github.akman</groupId>
-                <artifactId>jpackage-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>io._7st._7thmodpackupdater.LauncherKt</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
                 <executions>
                     <execution>
-                        <phase>verify</phase>
+                        <id>assemble-all</id>
+                        <phase>package</phase>
                         <goals>
-                            <goal>jpackage</goal>
+                            <goal>single</goal>
                         </goals>
-                        <configuration>
-                            <!-- put your configurations here -->
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>

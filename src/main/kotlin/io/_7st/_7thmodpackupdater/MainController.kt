@@ -132,7 +132,10 @@ class MainController {
 
         try {
             if (modsFolderPath.exists()) {
-                FileUtils.cleanDirectory(modsFolderPath.toFile())
+                val timestamp = System.currentTimeMillis() / 1000L
+                val modsBackupPath = Path.of(minecraftPath.toString(), "mods-${timestamp}")
+                Files.move(modsFolderPath, modsBackupPath)
+                Files.createDirectory(modsFolderPath)
             } else {
                 Files.createDirectory(modsFolderPath)
             }
