@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="_7thModpackUpdater">
+    <output-path>$PROJECT_DIR$/out/artifacts/_7thModpackUpdater</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="io._7st._7thmodpackupdater.JavaFXApplication" />
+        <option name="description" value="This application downloads, unpacks and replaces all Minecraft mods necessary to play on The 7th Guild MC server." />
+        <option name="height" value="240" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="icons">
+          <JavaFxApplicationIcons>
+            <option name="windowsIcon" value="$PROJECT_DIR$/MCIcon_A.ico" />
+          </JavaFxApplicationIcons>
+        </option>
+        <option name="nativeBundle" value="exe" />
+        <option name="title" value="The 7th Guild MC Updater" />
+        <option name="vendor" value="TheSeviest" />
+        <option name="version" value="1.0.0" />
+        <option name="width" value="720" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="_7thModpackUpdater.jar">
+        <element id="module-output" name="_7thModpackUpdater" />
+      </element>
+    </root>
+  </artifact>
+</component>
